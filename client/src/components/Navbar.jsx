@@ -59,7 +59,7 @@ const Navbar = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={` fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled ? "glass shadow-lg" : "bg-transparent"
       }`}
     >
@@ -113,7 +113,7 @@ const Navbar = () => {
               onClick={() => setShowSearch(!showSearch)}
               className="p-2 rounded-lg hover:bg-white/10 transition-colors"
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-7 h-7 " />
             </motion.button>
 
             {/* Auth Section */}
@@ -123,12 +123,12 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowUserMenu(!showUserMenu)}
-                  className="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-400 hover:border-primary-300 transition-colors"
+                  className=" bg-black w-10 h-10 rounded-full overflow-hidden border-2 border-primary-400 hover:border-primary-300 transition-colors"
                 >
                   <img
                     src={user?.avatar}
                     alt={user?.username}
-                    className="w-full h-full object-cover"
+                    className=" w-full h-full object-cover"
                   />
                 </motion.button>
 
