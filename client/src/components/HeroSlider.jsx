@@ -96,7 +96,7 @@ const HeroSlider = ({ slides = [] }) => {
                   </div>
 
                   {/* Title */}
-                  <h1 className="text-3xl md:text-3xl font-bold leading-tight">
+                  <h1 className="text-3xl md:text-5xl font-bold leading-tight">
                     {currentAnime.title}
                   </h1>
 
@@ -119,7 +119,7 @@ const HeroSlider = ({ slides = [] }) => {
                   </div>
 
                   {/* Synopsis */}
-                  <p className="text-gray-300 text-xl leading-relaxed line-clamp-3">
+                  <p className="text-gray-300 text-sm md:text-base leading-relaxed line-clamp-3">
                     {currentAnime.synopsis}
                   </p>
 

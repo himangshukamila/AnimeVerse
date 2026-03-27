@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // <--- 1. Added Link import
 import { motion } from "framer-motion";
 import HeroSlider from "../components/HeroSlider";
 import AnimeSlider from "../components/AnimeSlider";
@@ -108,34 +107,18 @@ const Home = () => {
           />
         </motion.div>
 
-        {/* <--- 3. Added New Releases Section Here */}
+        {/* New Releases Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35 }}
         >
-          <div className="flex justify-between items-end mb-[-20px] px-1">
-            {/* This empty div preserves layout since AnimeSlider has its own title logic, 
-                 but if you want a "View All" button next to the title, we can add it here 
-                 or customize AnimeSlider later. For now, we use the standard slider. */}
-          </div>
-
-          {/* We wrap it in a div to add the View All link manually if AnimeSlider doesn't support it naturally */}
-          <div className="relative">
-            <div className="absolute right-0 top-10 md:top-12 z-10 pr-4 md:pr-0">
-              <Link
-                to="/new-releases"
-                className="text-sm text-gray-400 hover:text-primary-400 transition-colors"
-              >
-                View All
-              </Link>
-            </div>
-            <AnimeSlider
-              title="✨ New Releases"
-              animes={newReleases}
-              loading={loading}
-            />
-          </div>
+          <AnimeSlider
+            title="✨ New Releases"
+            animes={newReleases}
+            loading={loading}
+            viewAllLink="/new-releases"
+          />
         </motion.div>
 
         {/* Top Airing */}

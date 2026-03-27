@@ -74,7 +74,7 @@ const AnimeCard = ({ anime }) => {
       className="relative group cursor-pointer"
       onClick={handleWatch}
     >
-      <div className="relative overflow-hidden rounded-xl bg-dark-200 card-hover">
+      <div className="relative overflow-hidden rounded-xl bg-dark-200">
         {/* Image */}
         <div className="relative aspect-[2/3] overflow-hidden">
           <img
@@ -82,7 +82,7 @@ const AnimeCard = ({ anime }) => {
               anime.images?.jpg?.large_image_url || anime.images?.jpg?.image_url
             }
             alt={anime.title}
-            className="w-full h-[50vh] bg-center  transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
             loading="lazy"
           />
 
